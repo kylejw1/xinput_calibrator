@@ -26,6 +26,15 @@
 #include "calibrator.hh"
 #include <list>
 
+#define DISABLE_PRINTF
+
+#ifdef DISABLE_PRINTF
+    #define printf(fmt, ...) (0)
+    #define printf2(fmt, ...) printf(fmt, ...)
+#else 
+    #define printf2(fmt, xxx) printf(fmt, ...)
+#endif
+
 /*******************************************
  * X11 class for the the calibration GUI
  *******************************************/
