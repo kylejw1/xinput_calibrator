@@ -100,10 +100,10 @@ bool CalibratorXorgPrint::output_xorgconfd(const XYinfo new_axys)
 
     // console out
     printf("%s", outstr.c_str());
-    if (not_sysfs_name)
-        printf("\nChange '%s' to your device's name in the config above.\n", sysfs_name);
-    // file out
-    else if(output_filename != NULL) {
+    // if (not_sysfs_name)
+    //     printf("\nChange '%s' to your device's name in the config above.\n", sysfs_name);
+    // // file out
+    // else if(output_filename != NULL) {
         FILE* fid = fopen(output_filename, "w");
         if (fid == NULL) {
             fprintf(stderr, "Error: Can't open '%s' for writing. Make sure you have the necessary rights\n", output_filename);
@@ -112,7 +112,7 @@ bool CalibratorXorgPrint::output_xorgconfd(const XYinfo new_axys)
         }
         fprintf(fid, "%s", outstr.c_str());
         fclose(fid);
-    }
+    // }
 
     return true;
 }
