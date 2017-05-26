@@ -151,7 +151,7 @@ CalibratorUsbtouchscreen::CalibratorUsbtouchscreen(const char* const device_name
     write_bool_parameter(p_flip_y, false);
     write_bool_parameter(p_swap_xy, false);
 
-    printf("Calibrating Usbtouchscreen, through the kernel module\n");
+    //printf("Calibrating Usbtouchscreen, through the kernel module\n");
 }
 
 CalibratorUsbtouchscreen::~CalibratorUsbtouchscreen()
